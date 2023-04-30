@@ -6,21 +6,47 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script defer src='main.js'></script>
 </head>
 <body>
-    <div class="inline-text">
-        <p>Starting money: </p>
-        <p id="txtStartingMoney">100</p>
-        <br>
-        <p>Gamble options: </p>
-        <select id="slcGambleOptions">
-            <option>Fixed amount</option>
-            <option>Fraction of money</option>
-        </select>
-        <br>
-        <p>Amount: </p>
-        <input type="text" id="txtAmount"/>
-    </div>
+    <section>
+        <h3>Input</h3>
+        <div class="inline-text">
+            <p>Starting money: </p>
+            <input type="number" id="txtStartingMoney"/>
+            <br>
+            <p>Gamble options: </p>
+            <select id="slcGambleOptions">
+                <option>Fixed amount</option>
+                <option>Fraction of money</option>
+            </select>
+            <br>
+            <p>Amount: </p>
+            <input type="number" id="txtAmount"/>
+            <br>
+            <p>Number of simulations: </p>
+            <input type="number" id="txtSimulationNumber"/>
+            <br>
+            <p>Number of actions per simulation: </p>
+            <input type="number" id="txtActionsNumber"/>
+            <br>
+            <button id="btnCalculate">Calculate</button>
+        </div>
+    </section>
+    <hr>
+    <section>
+        <h3>Output</h3>
+        <div class="inline-text">
+            <p>Worst case: </p>
+            <p id="txtWorstCase"></p>
+            <br>
+            <p>Best case: </p>
+            <p id="txtBestCase"></p>
+            <br>
+            <p>Average case: </p>
+            <p id="txtAverageCase"></p>
+        </div>
+        <canvas id="cvAverageResult"></canvas>
+    </section>
 </body>
 </html>
